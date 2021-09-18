@@ -1,7 +1,6 @@
 ---
 - name: tao_loopback
   hosts: all
-  gather_facts: no
 
   tasks:
     - name: Set Lo0 IPv4 address
