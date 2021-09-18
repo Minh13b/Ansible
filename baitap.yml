@@ -1,17 +1,8 @@
 ---
-- name: tao_loopback
-  hosts: all
-
-  tasks:
-    - name: Set Lo0 IPv4 address
-      ios_l3_interface:
-        name: Lo0
-        ipv4: 7.7.7.7/32
-    
-    - name: Show ip
-      ios_command:
-        commands:
-          - show ip int brief
-      register: output
-
-    - debug: var=output.stdout_lines
+. name: tao_loopback
+  host: all
+  task: 
+   .name: Set Lo0 IPv4 address
+    ios_l3_interface:
+      name: Lo0
+      ipv4: 7.7.7.7/32
