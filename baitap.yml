@@ -7,4 +7,12 @@
       ios_l3_interface:
         name: Lo0
         ipv4: 7.7.7.7/32
+    
+    - name: Show ip
+      ios_command:
+        commands:
+          - show ip int brief
+      register: output
+
+    - debug: var=output.stdout_lines
         
